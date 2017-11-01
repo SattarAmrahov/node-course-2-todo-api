@@ -7,11 +7,8 @@ MongoClient.connect("mongodb://"+ process.env.IP +"/TodoApp", (err, db) => {
     }
     console.log("Connected to MongoDB");
     
-    db.collection("Todo").find({}).toArray().then( (docs) => {
-        console.log("Todos");
-        console.log(JSON.stringify(docs, undefined, 2));
-    }, (err) => {
-        console.log(`Unable to fetch Todos. ${err}`);    
+    db.collection("Todo").deleteMany({text: "eating lunch"}).then((result)=>{
+        console.log(result);
     });
     
     

@@ -7,7 +7,7 @@ MongoClient.connect("mongodb://"+ process.env.IP +"/TodoApp", (err, db) => {
     console.log("Connected to MongoDB");
     
     // db.collection("Todo").insertOne({
-    //     text: "walking the dog",
+    //     text: "eating lunch",
     //     completed: false
     // }, (err, result) => {
     //     if (err) {
